@@ -1,0 +1,9 @@
+public static Integer findLargest(Integer num1, Integer num2, Integer num3) {
+	Integer largeNumber;
+    if(num1 < num2) largeNumber = num2;
+    else largeNumber = num1;
+
+    if(largeNumber < num3) largeNumber = num3;
+    
+    return largeNumber;
+}
