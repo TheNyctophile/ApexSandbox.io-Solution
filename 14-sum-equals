@@ -1,8 +1,8 @@
 public Boolean sumEquals(Integer a, Integer b, Integer c) {
-    Boolean result;
+    Boolean result = a+b == c ? true : false;
 
-    if(a+b == c) result = true;
+    /*if(a+b == c) result = true;
     else result = false;
-
+*/
     return result;
 }
