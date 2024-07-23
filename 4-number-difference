@@ -1,8 +1,8 @@
 public Integer diff(Integer a, Integer b) {
-    Integer result;
-    if(a<b) {
+    Integer result = a < b ? b-a : a-b;
+    /*if(a<b) {
         result = b-a;
     }
-    else result = a-b;
+    else result = a-b;*/
     return result;
 }
