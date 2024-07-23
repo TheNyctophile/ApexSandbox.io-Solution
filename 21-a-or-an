@@ -1,0 +1,20 @@
+public String aOrAn(String word) {
+    String newString;
+    if(word.StartsWith('a')) {
+        newString = 'an '+ word;
+    }
+    else if(word.StartsWith('e')) {
+        newString = 'an '+ word;
+    }
+    else if(word.StartsWith('i')) {
+        newString = 'an '+ word;
+    }
+    else if(word.StartsWith('o')) {
+        newString = 'an '+ word;
+    }
+    else if(word.StartsWith('u')) {
+        newString = 'an '+ word;
+    }
+    else newString = 'a '+ word;
+    return newString;
+}
