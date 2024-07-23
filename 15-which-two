@@ -1,22 +1,7 @@
 public String whichTwo(Integer a, Integer b, Integer c) {
-    String result;
-
-    /*if(a+b == c) {
-        result = 'c';
-    }
-
-    else if(c+a == b) {
-        result = 'b';
-    }
-
-    else if(c+b == a) {
-        result = 'a';
-    }
-
-    else result = '';*/
-    result = a+b == c ? 'c' :
-                c+a == b ? 'b' :
-                    c+b == a ? 'a' : '';
+    String result = a+b == c ? 'c' : //IF FALSE, NEXT LINE
+                        c+a == b ? 'b' : //IF FALSE, NEXT LINE
+                            c+b == a ? 'a' : '';
 
     return result;
 }
