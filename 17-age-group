@@ -1,10 +1,10 @@
 public String ageGroup(Integer n) {
     String result;
 
-    if (age => 0 && age <= 1) result = 'Infant';
-    else if (age => 2 && age <= 14) result = 'Child';
-    else if (age => 15 && age <= 21) result = 'Youth';
-    else (age => 22) result = 'Adult';
+    if (n => 0 && n <= 1) result = 'Infant';
+    else if (n => 2 && n <= 14) result = 'Child';
+    else if (n => 15 && n <= 21) result = 'Youth';
+    else (n => 22) result = 'Adult';
 
     return result;
 }
