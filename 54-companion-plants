@@ -7,20 +7,13 @@ public Boolean companionPlants(String plant1, String plant2) {
      onions and tomatoes.
     */
 
-     if (plant1 == plant2) result = false;
+    if (plant1 == plant2) result = false;
 
-    if(plant1 == 'lettuce') {
-        if (plant2 == 'cucumbers') result = true;
-        else if (plant2 == 'onions') result = true;
-        else result = false;
-    }
+    if(plant1 == 'lettuce' && (plant2 == 'cucumbers' || plant2 == 'onions')) result = true;
+    else if ((plant1 == 'cucumbers' || plant1 == 'onions') && plant2 == 'lettuce') result = true;
 
-    if(plant1 == 'onions') {
-        if (plant2 == 'carrots') result = true;
-        else if (plant2 == 'tomatoes') result = true;
-        else if (plant2 == 'lettuce') result = true;
-        else result = false;
-    }
+    if(plant1 == 'onions' && (plant2 == 'carrots' || plant2 == 'tomatoes')) result = true;
+    else if ((plant1 == 'carrots' || plant1 == 'tomatoes') && plant2 == 'lettuce') result = true;
 
     return result;
 }
