@@ -1,12 +1,6 @@
 public Boolean companionPlants(String plant1, String plant2) {
     Boolean result = false;
 
-     /*lettuce and cucumbers, 
-     lettuce and onions, 
-     onions and carrots, 
-     onions and tomatoes.
-    */
-
     if (plant1 == plant2) result = false;
 
     if(plant1 == 'lettuce' && (plant2 == 'cucumbers' || plant2 == 'onions')) result = true;
