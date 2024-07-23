@@ -1,0 +1,7 @@
+public Decimal computeTip(Decimal total, Integer percent) {
+    decimal tip;
+    if(percent >= 0 && percent <= 100) {
+        tip = (total * decimal.valueOf(percent))/100;
+    }    
+    return tip;
+}
