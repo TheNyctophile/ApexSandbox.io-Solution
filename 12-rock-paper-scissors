@@ -5,15 +5,15 @@ public Integer rockPaperScissors(String player1, String player2) {
         score = 0;
     }
 
-    if(player1 != player2 ) {
+    if(player1 != player2) {
         if (player1 == 'rock' && player2 == 'scissors') score = 1;
-        else (player2 == 'rock' && player1 == 'scissors') score = 2;
+        else if (player2 == 'rock' && player1 == 'scissors') score = 2;
 
         if (player1 == 'scissors' && player2 == 'paper') score = 1;
-        else (player2 == 'scissors' && player1 == 'paper') score = 2;
+        else if (player2 == 'scissors' && player1 == 'paper') score = 2;
 
         if (player1 == 'paper' && player2 == 'rock') score = 1;
-        else (player2 == 'paper' && player1 == 'rock') score = 2;
+        else if (player2 == 'paper' && player1 == 'rock') score = 2;
     }
 
     return score;
