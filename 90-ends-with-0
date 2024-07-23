@@ -1,0 +1,6 @@
+public Boolean isEndWithZero(Integer num){
+
+    Boolean result = math.mod(num, 10) == 0 ? true : false;
+    return result;
+
+}
