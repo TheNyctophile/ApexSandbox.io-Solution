@@ -6,6 +6,7 @@ public Boolean isLeapYear(Integer year) {
         if((math.mod(year, 100) == 0) && (math.mod(year, 400) == 0)) {
             result = true;
         }
+        else result = false;
     }
     else result = false;
 
