@@ -4,7 +4,7 @@ public Integer nextPrime(Integer num) {
 
     for(n = num+1; n > num; n++) {
         primecheck = isPrime(n);
-        if(n>0 && primecheck) {
+        if(n>1 && primecheck) {
             primeNum = n;
             break;
         }
