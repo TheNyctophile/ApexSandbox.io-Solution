@@ -2,7 +2,7 @@ public Integer fibonacci(Integer n) {
     Integer firstNum, secondNum, addn, count;
     firstNum = 0;
     secondNum = 1;
-    count = 1;
+    count = 0;
     
     while(count == n) {
         addn = firstNum + secondNum;
