@@ -2,8 +2,8 @@ public Boolean isPrime(Integer num) {
     
     for(Integer n = 2; n <= num-1; n++) {
         if(math.mod(num, n) == 0) {
-            return false;
+            return true;
         }
-        else return true;
+        else return false;
      }
 }
