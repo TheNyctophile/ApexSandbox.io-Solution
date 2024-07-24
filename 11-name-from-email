@@ -1,12 +1,12 @@
 public String nameFromEmail(String email) {
     String firstNameFromEmail, lastNameFromEmail, firstName, lastName, name;
     firstNameFromEmail = email.subStringBefore('.');
-    firstName = firstNameFromEmail.toLowerCase();
-    firstName = firstNameFromEmail.capitalize();
+    String firstName1 = firstNameFromEmail.toLowerCase();
+    firstName = firstName1.capitalize();
 
     lastNameFromEmail = email.subStringBetween('.', '@');
-    lastName = lastNameFromEmail.toLowerCase();
-    lastName = lastNameFromEmail.capitalize();
+    String lastName1 = lastNameFromEmail.toLowerCase();
+    lastName = lastName1.capitalize();
     name = firstName + ' ' + lastName;
     return name;
 }
