@@ -1,0 +1,10 @@
+public String changeTimeFormat(String strTime) {
+    String hour, minutes, time;
+    hour = strTime.substringBefore(':');
+    minute = strTime.substringAfter(':');
+
+    Integer hr = Integer.valueOf(hour);
+    Integer min = Integer.valueOf(minute);
+
+    time = String.valueOf(hr) + ':' + String.valueOf(min);
+}
