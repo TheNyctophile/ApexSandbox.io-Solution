@@ -7,4 +7,5 @@ public String changeTimeFormat(String strTime) {
     Integer min = Integer.valueOf(minutes);
 
     timeVal = String.valueOf(hr) + ':' + String.valueOf(min);
+    return timeVal;
 }
