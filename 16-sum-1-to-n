@@ -1,6 +1,6 @@
 public Integer sumToN(Integer n) {
-    Integer sum = 0;
-    while (integer num == n) {
+    Integer sum = 0, num;    
+    while (num == n) {
         sum = sum + num;
         num++;
     }
