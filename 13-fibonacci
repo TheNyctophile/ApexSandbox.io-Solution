@@ -2,9 +2,14 @@ public Integer fibonacci(Integer n) {
     Integer firstNum = 0, secondNum = 1, addn, count = 1;
     
     while(count <= n) {
-        addn = firstNum + secondNum;
-        firstNum = secondNum;
-        secondNum = addn;
+        if(count <= 2) {
+            addn = firstNum;
+        }
+        else if(count > 2) {
+            addn = firstNum + secondNum;
+            firstNum = secondNum;
+            secondNum = addn;
+        }
         count++;
     }
 
