@@ -1,5 +1,5 @@
 public String reverseWordsInASentence(String sentence){
-    String splitString = sentence.split(' ');
-    String reversed = splitString.reverse();
+    //String splitString = sentence.split(' ');
+    String reversed = sentence.reverse();
     return reversed;
 }
