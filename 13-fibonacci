@@ -1,5 +1,5 @@
 public Integer fibonacci(Integer n) {
-    Integer firstNum, secondNum, addn;
+    Integer firstNum, secondNum, addn, count;
     firstNum = 0;
     secondNum = 1;
     count = 1;
@@ -10,4 +10,6 @@ public Integer fibonacci(Integer n) {
         secondNum = addn;
         count++;
     }
+
+    return addn;
 }
