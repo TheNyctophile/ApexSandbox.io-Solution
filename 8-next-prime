@@ -1,0 +1,9 @@
+public Integer nextPrime(Integer num) {
+    Integer primeNum, n;
+
+    for(n = num+1; n > num; n++) {
+        
+    }
+
+    return primeNum;
+}
