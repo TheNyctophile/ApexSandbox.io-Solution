@@ -4,7 +4,7 @@ public String changeTimeFormat(String strTime) {
     hours = strTime.substringBefore(':');
     minutes = strTime.substringAfter(':');
 
-    if(Integer.valueOf(hours) <= 12) {
+    if(Integer.valueOf(hours) < 12) {
         amOrPm = 'AM';
         hr = Integer.valueOf(hours);
         hourVal = String.valueOf(hr);
@@ -12,7 +12,7 @@ public String changeTimeFormat(String strTime) {
             hourVal = '0'+hourVal;
         }
     }
-    else if(Integer.valueOf(hours) > 12) {
+    else if(Integer.valueOf(hours) >= 12) {
         amOrPm = 'PM';
         hr = Integer.valueOf(hours) - 12;
         hourVal = String.valueOf(hr);
