@@ -1,5 +1,6 @@
 public String nameFromEmail(String email) {
     String firstNameFromEmail, lastNameFromEmail, firstName, lastName, name;
+
     firstNameFromEmail = email.subStringBefore('.');
     String firstName1 = firstNameFromEmail.toLowerCase();
     firstName = firstName1.capitalize();
@@ -8,5 +9,6 @@ public String nameFromEmail(String email) {
     String lastName1 = lastNameFromEmail.toLowerCase();
     lastName = lastName1.capitalize();
     name = firstName + ' ' + lastName;
+    
     return name;
 }
