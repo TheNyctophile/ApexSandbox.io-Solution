@@ -2,8 +2,23 @@ public Integer nextPrime(Integer num) {
     Integer primeNum, n;
 
     for(n = num+1; n > num; n++) {
-        
+        isPrime(n);
+        if(isPrime) {
+            primeNum = n;
+        }
     }
 
     return primeNum;
+}
+
+public Boolean isPrime(Integer num) {
+    boolean result;
+    integer count = 0;
+    for(Integer n = 1; n <= num; n++) {
+        if(math.mod(num, n) == 0) {
+            count ++;
+        }
+    }
+    result = (count > 2) ? false : true;
+    return result;
 }
