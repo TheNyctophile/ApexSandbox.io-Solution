@@ -2,7 +2,7 @@ public Integer nextPrime(Integer num) {
     Integer primeNum, n;
 
     for(n = num+1; n > num; n++) {
-        Class.isPrime(n);
+        isPrime(n);
         if(isPrime) {
             primeNum = n;
         }
