@@ -7,6 +7,7 @@ public Integer nextPrime(Integer num) {
             primeNum = n;
         }
     }
+
     public Boolean isPrime(Integer num) {
         boolean result;
         integer count = 0;
