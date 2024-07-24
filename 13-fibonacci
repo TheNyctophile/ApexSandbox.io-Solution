@@ -1,8 +1,7 @@
 public Integer fibonacci(Integer n) {
-    Integer firstNum, secondNum, addn, count;
+    Integer firstNum, secondNum, addn, count = 1;
     firstNum = 0;
     secondNum = 1;
-    count = 0;
     
     while(count == n) {
         addn = firstNum + secondNum;
