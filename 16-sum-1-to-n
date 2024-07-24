@@ -2,7 +2,7 @@ public Integer sumToN(Integer n) {
     Integer sum = 0;
     while (integer num == n) {
         sum = sum + num;
-        num++
+        num++;
     }
     return sum;
 }
