@@ -1,5 +1,5 @@
 public String reverseWordsInASentence(String sentence){
-    String formatted2;
+    /*String formatted2;
 
     if(sentence != null) {
         String reversed = sentence.reverse();
@@ -18,6 +18,30 @@ public String reverseWordsInASentence(String sentence){
         formatted2 = formatted1.removeStart('(');
     }
     
-    return formatted2;
+    return formatted2;*/
+
+    //your flawless code here
+
+    if(sentence ==  null){
+
+        return null;
+
+    }else{
+
+        String output = '';
+
+        String[] lstSen = sentence.split(' ');
+
+        for (Integer i = lstSen.size()-1; i >=0; i--) {
+
+           String x= lstSen[i] + ' ';
+
+           output +=x;
+
+        }
+
+        return output.trim();
+
+    }
 
 }
