@@ -1,8 +1,13 @@
 public static Integer findLargest(Integer num1, Integer num2, Integer num3) {
-	Integer largeNumber;
+	Integer largeNumber; //AN INTEGER TO BE RETURNED
+
+    //CHECK FOR THE LARGER NUMBER AMONG NUM1 AND NUM2
+    //ASSIGN THE LARGER NUMBER TO VARIABLE THAT IS TO BE RETURNED
     if(num1 < num2) largeNumber = num2;
     else largeNumber = num1;
 
+    //CHECK FOR THE LARGER NUMBER AMONG NUM3 AND largeNumber
+    //ASSIGN THE LARGER NUMBER TO VARIABLE THAT IS TO BE RETURNED
     if(largeNumber < num3) largeNumber = num3;
     
     return largeNumber;
