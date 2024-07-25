@@ -1,7 +1,9 @@
 public String aOrAn(String word) {
-    String newString;
+    String newString; //EMPTY STRING TO BE RETURNED
+
+    //CHECK IF THE WORD STARTS WITH A VOWEL
     if(word.StartsWith('a')) {
-        newString = 'an '+ word;
+        newString = 'an '+ word; //ADD A SUBSTRING 'an ' TO THE WORD
     }
     else if(word.StartsWith('e')) {
         newString = 'an '+ word;
@@ -15,6 +17,8 @@ public String aOrAn(String word) {
     else if(word.StartsWith('u')) {
         newString = 'an '+ word;
     }
-    else newString = 'a '+ word;
+
+    //IF THE WORD DOESN'T START WITH A VOWEL
+    else newString = 'a '+ word; //ADD A SUBSTRING 'a ' TO THE WORD
     return newString;
 }
