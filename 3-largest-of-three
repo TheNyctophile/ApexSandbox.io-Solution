@@ -1,5 +1,5 @@
 public static Integer findLargest(Integer num1, Integer num2, Integer num3) {
-	Integer largeNumber; //AN INTEGER TO BE RETURNED
+	Integer largeNumber; //VARIABLE TO BE RETURNED
 
     //CHECK FOR THE LARGER NUMBER AMONG NUM1 AND NUM2
     //ASSIGN THE LARGER NUMBER TO VARIABLE THAT IS TO BE RETURNED
