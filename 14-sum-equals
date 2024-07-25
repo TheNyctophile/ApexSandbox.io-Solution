@@ -1,4 +1,5 @@
 public Boolean sumEquals(Integer a, Integer b, Integer c) {
+    //CHECK IF THE FIRST TWO NUMBERS ADD UP TO THE THIRD NUMBER
     Boolean result = a+b == c ? true : false;
     return result;
 }
