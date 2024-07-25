@@ -1,19 +1,22 @@
 public String reverseWordsInASentence(String sentence){
+    String formatted2 = '';
 
-    String reversed = sentence.reverse();
+    if(sentence != null) {
+        String reversed = sentence.reverse();
     
-    List<String> splitReversed = reversed.split(' ');
-    List<String> newList = new List<String>();
+        List<String> splitReversed = reversed.split(' ');
+        List<String> newList = new List<String>();
 
-    for(String word : splitReversed) {
-        String newWord = word.reverse();
-        newList.add(newWord);
+        for(String word : splitReversed) {
+            String newWord = word.reverse();
+            newList.add(newWord);
+        }
+
+        String finalString = newList.toString();
+        String updatedFinal = finalString.replace(',','');
+        String formatted1 = updatedFinal.removeEnd(')');
+        formatted2 = formatted1.removeStart('(');
     }
-
-    String finalString = newList.toString();
-    String updatedFinal = finalString.replace(',','');
-    String formatted1 = updatedFinal.removeEnd(')');
-    String formatted2 = formatted1.removeStart('(');
     
     return formatted2;
 
