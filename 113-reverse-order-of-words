@@ -12,7 +12,9 @@ public String reverseWordsInASentence(String sentence){
 
     String finalString = newList.toString();
     String updatedFinal = finalString.replace(',','');
-
-    return updatedFinal;
+    String formatted1 = finalString.removeEnd(')');
+    String formatted2 = formatted1.removeStart('(');
+    
+    return formatted2;
 
 }
