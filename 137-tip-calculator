@@ -3,6 +3,7 @@ public Decimal computeTip(Decimal total, Integer percent) {
 
     //CHECK IF THE PERCENTAGE LIES BETWEEN 0 TO 100
     if(percent >= 0 && percent <= 100) {
+        //FORMULA : (TOTAL * PERCENTAGE) / 100
         tip = (total * decimal.valueOf(percent))/100;
     }    
     return tip;
