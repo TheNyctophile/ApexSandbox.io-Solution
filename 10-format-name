@@ -1,0 +1,19 @@
+public String formatName(String firstName, String lastName) {
+    String name = ''; //VARIABLE TO BE RETURNED
+
+    //IF THE FISTNAME IS BLANK, USE THE LASTNAME
+    if(String.isBlank(firstName) && lastName != null) {
+        name = lastName;
+    }
+
+    //IF THE LASTNAME IS BLANK, USE THE FIRSTNAME
+    else if(String.isBlank(lastName) && lastName != null) {
+        name = firstName;
+    }
+
+    //CONCATENATE THE LASTNAME, FIRSTNAME
+    else if(String.isNotBlank(firstName) && String.isNotBlank(lastName)) {
+        name = lastName + ', ' + firstName;
+    }
+    return name;
+}
