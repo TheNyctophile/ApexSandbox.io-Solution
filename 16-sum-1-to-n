@@ -1,8 +1,10 @@
 public Integer sumToN(Integer n) {
-    Integer sum = 0, num = 0;    
+    Integer sum = 0, num = 0; //VARIABLES DECLARATION AND ASSIGNMENT
+
+    //ITERATE FOR THE NUMBERS LESS THAN 'n'
     while (num <= n) {
-        sum = sum + num;
-        num++;
+        sum = sum + num; //TOTAL SUM = THE CURRENT NUMBER + PREVIOUS SUM
+        num++; //INCREMENT THE NUMBER ITSELF
     }
     return sum;
 }
