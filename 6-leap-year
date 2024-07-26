@@ -1,10 +1,15 @@
 public Boolean isLeapYear(Integer year) {
-    Boolean result = false;
+    Boolean result = false; //VARIABLE TO BE RETURNED
 
+    //IF THE YEAR IS DIVISBLE BY 4, IT IS A LEAP YEAR
     if(math.mod(year, 4) == 0){
         result = true;
+
+        //IF THE YEAR IS DIVISBLE BY 4 AND 100, IT IS NOT A LEAP YEAR
         if(math.mod(year, 100) == 0) {
             result = false;
+
+            //IF THE YEAR IS DIVISBLE BY 4, 100 AND 400, IT IS A LEAP YEAR
             if (math.mod(year, 400) == 0) {
                 result = true;
             }
