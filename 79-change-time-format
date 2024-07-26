@@ -1,32 +1,47 @@
 public String changeTimeFormat(String strTime) {
+    //VARIABLE DECLARATION
     String hours, hourVal, minutes, timeVal, amOrPm;
     Integer hr;
+
+    //SPLITTING THE STRING TO FIND HOURS AND MINUTES
     hours = strTime.substringBefore(':');
     minutes = strTime.substringAfter(':');
 
+    //HOUR LESS THAN 1200 HOURS
     if(Integer.valueOf(hours) < 12) {
         amOrPm = 'AM';
+
+        //SETTING HOUR 0000 TO 12:00, FOR 12-HR FORMAT
         hr = Integer.valueOf(hours);
         if (hr == 0) {
             hr = 12;
         }
-        hourVal = String.valueOf(hr);
-        if(hourVal.length() < 2) {
-            hourVal = '0'+hourVal;
-        }
-    }
-    else if(Integer.valueOf(hours) >= 12) {
-        amOrPm = 'PM';
-        hr = Integer.valueOf(hours);
-        if(hr > 12) {
-            hr = Integer.valueOf(hours) - 12;
-        }
+
+        //PREFIX 0 TO THE HOUR IF HOUR STRING SIZE IS LESS THAN 2
         hourVal = String.valueOf(hr);
         if(hourVal.length() < 2) {
             hourVal = '0'+hourVal;
         }
     }
 
+    //HOUR GREATER THAN 1200 HOURS
+    else if(Integer.valueOf(hours) >= 12) {
+        amOrPm = 'PM';
+
+        //SUBTRACTING HOUR VALUE BY 12, FOR 12-HR FORMAT
+        hr = Integer.valueOf(hours);
+        if(hr > 12) {
+            hr = Integer.valueOf(hours) - 12;
+        }
+
+        //PREFIX 0 TO THE HOUR IF HOUR STRING SIZE IS LESS THAN 2
+        hourVal = String.valueOf(hr);
+        if(hourVal.length() < 2) {
+            hourVal = '0'+hourVal;
+        }
+    }
+
+    //CREATING TIME VALUE STRING
     timeVal = hourVal + ':' + minutes + ' ' + amOrPm;
     return timeVal;
 }
