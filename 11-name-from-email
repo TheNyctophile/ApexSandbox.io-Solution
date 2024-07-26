@@ -1,13 +1,26 @@
 public String nameFromEmail(String email) {
+    //VARIABLE DECLARATION
     String firstNameFromEmail, lastNameFromEmail, firstName, lastName, name;
 
+    //GET THE SUB STRING BEFORE '.'
     firstNameFromEmail = email.subStringBefore('.');
+
+    //CONVERT THE SUBSTRING TO LOWERCASE
     String firstName1 = firstNameFromEmail.toLowerCase();
+
+    //CAPITALIZE THE FIRST ALPHABET
     firstName = firstName1.capitalize();
 
+    //GET THE SUB STRING BETWEEN '.' AND '@'
     lastNameFromEmail = email.subStringBetween('.', '@');
+
+    //CONVERT THE SUBSTRING TO LOWERCASE
     String lastName1 = lastNameFromEmail.toLowerCase();
+
+    //CAPITALIZE THE FIRST ALPHABET
     lastName = lastName1.capitalize();
+
+    //OUTPUT STRING
     name = firstName + ' ' + lastName;
     
     return name;
