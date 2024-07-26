@@ -1,11 +1,16 @@
 public Boolean isPrime(Integer num) {
-    boolean result;
-    integer count = 0;
+    boolean result; //VARIABLE TO BE RETURNED
+
+    integer count = 0; //INITIAL COUNT TO BE 0
+
+    //IF THE NUMBER IS DISIBLE BY ANY NUMBER OTHER THAN 1 AND THE NUMBER ITSLEF, INCREASE THE COUNT
     for(Integer n = 1; n <= num; n++) {
         if(math.mod(num, n) == 0) {
             count ++;
         }
     }
+
+    //IF THE COUNT IS GREATER THAN 2, THE NUMBER IS NOT A PRIME NUMBER
     result = (count > 2) ? false : true;
     return result;
 }
