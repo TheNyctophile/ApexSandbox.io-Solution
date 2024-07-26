@@ -1,4 +1,6 @@
 public String evenOrOdd(Integer num) {
+
+    //IF THE NUMBER IS DIVISIBLE BY 2, IT IS EVEN, ELSE IT IS ODD
     String result = math.mod(num, 2) == 0 ? 'even' : 'odd';
     return result;
 }
