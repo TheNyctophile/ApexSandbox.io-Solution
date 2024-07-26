@@ -1,5 +1,5 @@
 public Boolean isEndWithZero(Integer num){
-
+    //IF THE NUMBER IS DIVISIBLE BY THE, IT ENDS WITH A 0
     Boolean result = math.mod(num, 10) == 0 ? true : false;
     return result;
 
