@@ -1,5 +1,7 @@
 public Boolean isPassed(Boolean passedExam, Boolean passedAssignments, Boolean passedProject) {
-    boolean passed;
+    boolean passed; //VARIABLE TO BE RETURNED
+
+    //CHECK FOR THE CONDITIONS, RETURN TRUE
     if(passedExam == true && passedAssignments == true) {
         passed = true;
     }
@@ -9,6 +11,8 @@ public Boolean isPassed(Boolean passedExam, Boolean passedAssignments, Boolean p
     else if(passedExam == true && passedProject == true) {
         passed = true;
     }
+
+    //IF NO CONDITION IS MATCHED, RETURN FALSE
     else passed = false;
 
     return passed;
