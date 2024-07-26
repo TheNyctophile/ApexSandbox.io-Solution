@@ -1,16 +1,29 @@
 public Integer fibonacci(Integer n) {
+    
+    //VARIABLE DECLARATION AND ASSIGNMENT
     Integer firstNum = 0, secondNum = 1, addn, count = 1;
     
+    //ITERATE FOR ALL NUMBERS WHICH ARE LESS THAN OR EQUAL TO 'n'
     while(count <= n) {
+
+        //IF THE NUMBER IS LESS THAN 2
         if(count <= 2) {
+
+            //UPDATE THE SEQUENCE FOR FIBONACCI SERIES
             addn = secondNum;
             firstNum = secondNum;
         }
+
+        //IF THE NUMBER IS MORE THAN 2
         else if(count > 2) {
+
+            //THE FIBONACCI SERIES IS THE ADDITION OF THE PREVIOUS TWO NUMBERS
             addn = firstNum + secondNum;
             firstNum = secondNum;
             secondNum = addn;
         }
+
+        //INCREASING THE COUNT WITH EACH ITERATION
         count++;
     }
 
