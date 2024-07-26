@@ -1,26 +1,40 @@
 public Integer nextPrime(Integer num) {
+    //VARIABLE DECLARATION
     Integer primeNum, n;
     Boolean primecheck;
 
+    //ITERATE FOR ALL NUMBERS THAT ARE GREATER THAN 'num'
     for(n = num+1; n > num; n++) {
+
+        //ASSIGN THE VALUE RETURNED BY THE METHOD THAT VALIDATES FOR PRIME NUMBER
         primecheck = isPrime(n);
+
+        //IF THE NUMBER IS GREATER THAN 'num' AND IS A PRIME NUMBER
         if(n>1 && primecheck) {
             primeNum = n;
-            break;
+            break; //BREAK IF THE PRIME NUMBER IS FOUND
         }
     }
 
     return primeNum;
 }
 
+//METHOD TO CHECK FOR PRIME NUMBER
 public Boolean isPrime(Integer num) {
+    //VARIABLE DECLARATION ANF ASSIGNMENT
     boolean result;
     integer count = 0;
+
+    //ITERATE FOR ALL NUMBERS LESS THAN THE NUMBER SENT AS A PARAMETER
     for(Integer n = 1; n <= num; n++) {
+
+        //THE THE NUMBER IS DIVISIBLE BY THE CURRENT NUMBER, INCREMENT THE COUNT
         if(math.mod(num, n) == 0) {
             count ++;
         }
     }
+
+    //IF THE COUNT IS GREATER THAN 2, RETURN FALSE
     result = (count > 2) ? false : true;
     return result;
 }
