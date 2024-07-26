@@ -1,4 +1,6 @@
 public String whichTwo(Integer a, Integer b, Integer c) {
+
+    //CHECK IF ANY TWO NUMBERS ADD UP TO THE THIRD NUMBER
     String result = a+b == c ? 'c' : //IF FALSE, NEXT LINE
                         c+a == b ? 'b' : //IF FALSE, NEXT LINE
                             c+b == a ? 'a' : '';
