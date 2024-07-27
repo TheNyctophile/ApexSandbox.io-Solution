@@ -7,7 +7,7 @@ public Id insertStudent(String name, String email) {
         student.add(stud);
     }
 
-    insert apxio__Student__c;
+    insert student;
     return apxio__Student__c.Id;
 
 }
