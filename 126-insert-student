@@ -8,6 +8,6 @@ public Id insertStudent(String name, String email) {
     }
 
     insert student;
-    return apxio__Student__c.Id;
+    return student.Id;
 
 }
