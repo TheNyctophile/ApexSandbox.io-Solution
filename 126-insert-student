@@ -8,6 +8,6 @@ public Id insertStudent(String name, String email) {
     }
 
     insert student;
-    return student.Id;
+    return Id;
 
 }
