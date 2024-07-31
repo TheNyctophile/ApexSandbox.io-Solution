@@ -1,9 +1,15 @@
 public Id insertStudent(String name, String email) {
     
+    //CREATE A NEW INSTANCE OF THE STUDENT OBJECT
     apxio__Student__c student = new apxio__Student__c();
+
+    //MAP THE RECEIVED DATA TO EACH FIELD
     student.Name = name;
     student.apxio__Email__c = email;
-    insert student;
-    return student.Id;
 
+    //INSERT THE STUDENT RECORD TO THE DATABASE
+    insert student;
+
+    //RETURN THE RECORD'S ID
+    return student.Id;
 }
