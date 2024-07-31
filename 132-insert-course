@@ -9,6 +9,7 @@ public Id insertCourse(String name, String details, Integer credits) {
     if(credits > 0 && credits <= 4) {
         course.apxio__Credits__c = String.ValueOf(credits);
     }
+    else course.apxio__Credits__c = null;
 
     //INSERT THE RECORD TO THE DATABASE
     insert course;
