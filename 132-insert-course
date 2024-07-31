@@ -4,15 +4,14 @@ public Id insertCourse(String name, String details, Integer credits) {
     apxio__Course__c course = new apxio__Course__c();
 
     //DATA MAPPING
-    course.Name = name;
-    course.apxio__Course_Details__c = details;
     if(credits > 0 && credits <= 4) {
+        course.Name = name;
+        course.apxio__Course_Details__c = details;
         course.apxio__Credits__c = String.ValueOf(credits);
+        
+        //INSERT THE RECORD TO THE DATABASE
+        insert course;
     }
-    else course.apxio__Credits__c = null;
-
-    //INSERT THE RECORD TO THE DATABASE
-    insert course;
 
     //RETURN THE ID OF THE INSERTED COURSE
     return course.Id;
