@@ -1,0 +1,19 @@
+public Id insertCourse(String name, String details, Integer credits) {
+    
+    //CREATE A NEW INSTANCE OF THE COURSE OBJECT
+    apxio__Course__c course = new apxio__Course__c();
+
+    //DATA MAPPING
+    course.Name = name;
+    course.apxio__Course_Details__c = details;
+    if(credits > 0 && credits <= 4) {
+        course.apxio__Credits__c = credits;
+    }
+    else course.apxio__Credits__c = null;
+
+    //INSERT THE RECORD TO THE DATABASE
+    insert course;
+
+    //RETURN THE ID OF THE INSERTED COURSE
+    return course.Id;
+}
