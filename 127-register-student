@@ -7,9 +7,11 @@ public String registerStudent(String name, String phone, String email) {
         stud.apxio__Phone__c = phone;
         stud.apxio__Email__c = email;
         insert stud;
-        regNo = [SELECT apxio__Registration_Number__c 
-                        FROM apxio__Student__c
-                        WHERE Id = :stud.Id];
+        List<apxio__Student__c> studRegNo = [SELECT apxio__Registration_Number__c 
+                                            FROM apxio__Student__c
+                                            WHERE Id = :stud.Id];
+
+        regNo = apxio__Student__c.toString();
     }
 
     return regNo;
