@@ -1,19 +1,24 @@
 public String registerStudent(String name, String phone, String email) {
-    String regNo;
+    String regNo; //VARIABLE TO BE RETURNED
     
+    //NEW INSTANCE OF THE OBJECT
     apxio__Student__c stud = new apxio__Student__c ();
+
+    //CHECK IF ALL THE REQUIRED DATA IS PRESENT
     if (name != null && phone != null && email != null) {
+        
+        //DATA BINDING AND RECORD INSERTION
         stud.Name = name;
         stud.apxio__Phone__c = phone;
         stud.apxio__Email__c = email;
         insert stud;
-        //List<apxio__Student__c> studRegNo = [SELECT apxio__Registration_Number__c 
-        //                                    FROM apxio__Student__c
-        //                                    WHERE Id = :stud.Id];
 
+        //FETCH THE REG. NO. FOR THE NEWLY CREATED RECORD
         for(apxio__Student__c studRegNo : [SELECT apxio__Registration_Number__c 
                                             FROM apxio__Student__c
                                             WHERE Id = :stud.Id]) {
+            
+            //ASSIGN THE REG. NO. TO THE RETURNED STRING
             regNo = studRegNo.apxio__Registration_Number__c;
         }
     }
