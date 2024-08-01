@@ -1,6 +1,6 @@
 public List<apxio__Student__c> selectActiveStudents() {
     List<apxio__Student__c> activeStudents = new List<apxio__Student__c>();
-    for (apxio__Student__c stud : [SELECT Id FROM apxio__Student__c WHERE apxio__Active__c = true]) {
+    for (apxio__Student__c stud : [SELECT Id, Name FROM apxio__Student__c WHERE apxio__Active__c = true]) {
         activeStudents.add(stud);
     }
     return activeStudents;
