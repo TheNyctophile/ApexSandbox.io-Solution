@@ -1,0 +1,16 @@
+public String registerStudent(String name, String phone, String email) {
+    String regNo;
+    
+    apxio__Student__c stud = new apxio__Student__c ();
+    if (name != null && phone != null && email != null) {
+        stud.Name = name;
+        stud.apxio__Phone__c = phone;
+        stud.apxio__Email__c = email;
+        insert stud;
+        regNo = [SELECT apxio__Registration_Number__c 
+                        FROM apxio__Student__c
+                        WHERE Id = :stud.Id];
+    }
+
+    return regNo;
+}
