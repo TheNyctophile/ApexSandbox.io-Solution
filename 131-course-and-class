@@ -10,7 +10,7 @@ public void createCourseAndClass(String name, String description) {
 
     classDet.apxio__Course__c = course.Id;
     classDet.Name = name;
-    classDet.apxio__Description__c  = description;
+    classDet.apxio__Description__c  = description.substring(0,255);
 
     insert classDet;
 }
