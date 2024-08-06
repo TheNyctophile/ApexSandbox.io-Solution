@@ -1,0 +1,15 @@
+public Id classFromCourse(String courseName) {
+    
+    Id classId;
+    
+    apxio__Class__c classRec = new apxio__Class__c();
+    apxio__Course__c courseRec = [SELECT Id FROM apxio__Course__c WHERE Name = :courseName];
+
+    if(courseRec != null) {
+        classRec.Name = courseName;
+        insert classRec;
+        classId = classRec.Id;
+    }
+
+    return classId;
+}
