@@ -1,8 +1,12 @@
 public void insertStudents(List<String> studentNames, List<String> studentEmails) {
 
+    //CREATE A NEW EMPTY LIST OF THE STUDENT OBJECT
     List<apxio__Student__c> studentList = new List<apxio__Student__c>();
 
+    //ITERATE OVER EACH ELEMENT OF THE LIST
     for(integer i=0; i<studentNames.size(); i++) {
+
+        //CREATE A NEW STUDENT RECORD TO ASSIGN VALUES AND THEN ADD TO THE LIST
         apxio__Student__c student = new apxio__Student__c();
         student.Name = studentNames[i];
         student.apxio__Email__c = studentEmails[i];
