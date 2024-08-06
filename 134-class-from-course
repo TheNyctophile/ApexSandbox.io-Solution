@@ -1,21 +1,15 @@
 public Id classFromCourse(String courseName) {
     
-    
+    Id classId;
     apxio__Course__c courseRec = [SELECT Id, Name FROM apxio__Course__c WHERE Name = :courseName];
 
-    try{
-        if(courseRec != null) {
+    if(courseRec != null) {
         apxio__Class__c classRec = new apxio__Class__c();
         classRec.Name = courseRec.Name;
         classRec.apxio__Course__c = courseRec.Id;
         insert classRec;
-        Id classId = classRec.Id;
+        classId = classRec.Id;
     }
-    }
-    catch (exception ex) {
-        Id classId;
-    }
-    
 
     return classId;
 }
