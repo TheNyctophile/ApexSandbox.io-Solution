@@ -1,23 +1,25 @@
 public void createCourseAndClass(String name, String description) {
+
+    //NULL CHECK FOR DESCRIPTION
     if(description == null) {
         description = '';
     }
     
+    //CREATING THE COURSE RECORD BY CREATING AN INSTANCE OF THE COURSE OBJECT
     apxio__Course__c course = new apxio__Course__c();
-
     course.Name = name;
     course.apxio__Course_Details__c = description;
-
     insert course;
 
+    //CREATING THE CLASS RECORD BY CREATING AN INSTANCE OF THE CLASS OBJECT
     apxio__Class__c classDet = new apxio__Class__c();
-
     classDet.apxio__Course__c = course.Id;
     classDet.Name = name;
+
+    //TRUNCATING THE DESCRIPTION IF LENGHT EXCEEDS 255 CHARACTERS
     if(description.length() > 255) {
         classDet.apxio__Description__c  = description.substring(0,255);
     }
     else classDet.apxio__Description__c  = description;
-
     insert classDet;
 }
