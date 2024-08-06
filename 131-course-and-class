@@ -8,7 +8,6 @@ public void createCourseAndClass(String name, String description) {
 
     insert course;
 
-    if (name != null && description != null) {
     apxio__Class__c classDet = new apxio__Class__c();
 
     classDet.apxio__Course__c = course.Id;
@@ -19,5 +18,4 @@ public void createCourseAndClass(String name, String description) {
     else classDet.apxio__Description__c  = description;
 
     insert classDet;
-    }
 }
