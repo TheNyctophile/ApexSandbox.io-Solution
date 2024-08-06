@@ -7,6 +7,7 @@ public Id classFromCourse(String courseName) {
 
     if(courseRec != null) {
         classRec.Name = courseName;
+        classRec.apxio__Course__c = courseRec.Id;
         insert classRec;
         classId = classRec.Id;
     }
