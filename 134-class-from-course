@@ -1,15 +1,18 @@
 public Id classFromCourse(String courseName) {
    
-    
+    //GET THE LIST OF COURSES FILTERED BY COURSENAME
     List<apxio__Course__c> courses = [SELECT Id FROM apxio__Course__c WHERE Name = :courseName];
 
+    //IF THE LIST IS EMPTY RETURN NULL
     if (courses.size() == 0) return null;
 
+    //DATA BINDING FOR THE CLASS RECORDS
     apxio__Class__c cls = new apxio__Class__c(
         apxio__Course__c = courses[0].Id,
         Name = courseName
     );
 
+    //INSERT THE CLASS RECORD AND RETURN THE ID
     insert cls;
     return cls.Id;
 }
