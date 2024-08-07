@@ -3,13 +3,11 @@ public Id classFromCourse(String courseName) {
     Id classId;
     apxio__Course__c courseRec = [SELECT Id, Name FROM apxio__Course__c WHERE Name = :courseName];
 
-    if(courseRec != null) {
-        apxio__Class__c classRec = new apxio__Class__c();
-        classRec.Name = courseRec.Name;
-        classRec.apxio__Course__c = courseRec.Id;
-        insert classRec;
-        classId = classRec.Id;
-    }
-
+    apxio__Class__c classRec = new apxio__Class__c();
+    classRec.Name = courseRec.Name;
+    classRec.apxio__Course__c = courseRec.Id;
+    insert classRec;
+    classId = classRec.Id;
+    
     return classId;
 }
