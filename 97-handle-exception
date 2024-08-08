@@ -1,0 +1,10 @@
+public String divide(Integer a, Integer b){
+    try{
+        Integer division = a/b;
+        String div = String.ValueOf(division);
+        return div;
+    }
+    catch (exception ex) {
+        return ex;
+    }
+}
