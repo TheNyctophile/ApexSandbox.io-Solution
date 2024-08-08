@@ -1,4 +1,6 @@
 public Boolean isTypeAccount(sObject record) {
+
+    //USING THE INSTANCEOF KEYWORD TO CHECK IF THE record IS OF THE SOBJECT TYPE Account
     Boolean result = record instanceof Account;
     return result;
 }
