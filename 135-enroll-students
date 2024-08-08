@@ -7,9 +7,10 @@ public void enrollStudents(List<String> emails, String className) {
     apxio__Class__c classId = [SELECT Id FROM apxio__Class__c WHERE Name = :className];
 
     for(integer n = 0; n < students.size(); n++) {
-        apxio__Class_Enrollment__c enroll = new apxio__Class_Enrollment__c();
+        apxio__Class_Enrollment__c enroll = new apxio__Class_Enrollment__c(
         apxio__Student__c = students[n].id;
         apxio__Offered_Class__c = classId.Id;
+        );
     }
     enrollList.add(enroll);
 
