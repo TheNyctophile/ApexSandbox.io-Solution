@@ -9,55 +9,10 @@ public void enrollStudents(List<String> emails, String className) {
     for(integer n = 0; n < students.size(); n++) {
         apxio__Class_Enrollment__c enroll = new apxio__Class_Enrollment__c(
         apxio__Student__c = students[n].Id,
-        apxio__Offered_Class__c = classId.Id);
+        apxio__Offered_Class__c = classId);
         enrollList.add(enroll);
     }
     
     insert enrollList;
 
-
-/*
-    List<apxio__Student__c> students = [SELECT Id FROM apxio__Student__c WHERE apxio__Email__c IN :emails];
-
-    apxio__Class__c classId = [SELECT Id FROM apxio__Class__c WHERE Name = :className];
-
-    List<apxio__Class_Enrollment__c> enrollList = new List<apxio__Class_Enrollment__c>();
-    for(integer n=0; n<students.size(); n++) {
-        apxio__Class_Enrollment__c enroll = new apxio__Class_Enrollment__c(
-            apxio__Student__c = students[n].Id;
-            apxio__Offered_Class__c = classId.id;
-        );
-        enrollList.add(enroll);
-    }
-    insert enrollList;
-*/
-/*
-    List<apxio__Class_Enrollment__c> enrollments=new List<apxio__Class_Enrollment__c>();
-    List<apxio__Student__c> students = [Select Id,Name FROM apxio__Student__c
-
-                                        WHERE apxio__Email__c IN : emails ];
-
-    List<apxio__Class__c> clsName = [Select Id,Name FROM apxio__Class__c
-
-                                    WHERE Name =: className];
-
-    for(Integer i=0;i<students.size();i++){
-
-        apxio__Class_Enrollment__c studentToEnroll =new apxio__Class_Enrollment__c(
-
-            apxio__Student__c=students[i].Id,
-
-            apxio__Offered_Class__c=clsName[0].Id
-
-        );
-
-        enrollments.add(studentToEnroll);
-
-    }
-
-    if(!enrollments.isEmpty()){
-
-        insert enrollments;
-
-    }*/
 }
