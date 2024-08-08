@@ -1,8 +1,5 @@
 public String convert15to18DigitId(String fifteenDigit) {
-    Id recId = Id.ValueOf(fifteenDigit);
-
-/*
-{
+    //Id recId = Id.ValueOf(fifteenDigit);
 
     String sLetter = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ012345';
 
@@ -34,6 +31,4 @@ public String convert15to18DigitId(String fifteenDigit) {
 
     return (fifteenDigit+sKey);
 
-}
-*/
 }
