@@ -1,34 +1,23 @@
 public void enrollStudents(List<String> emails, String className) {
-   /* 
+
+    //INITIALISE AN EMPTY LIST FOR ENOLLMENT RECORDS
     List<apxio__Class_Enrollment__c> enrollList = new List<apxio__Class_Enrollment__c>();
 
+    //GET THE STUDENTS RECORDS USING THE PROVIDED EMAILS
     List<apxio__Student__c> students = [SELECT Id FROM apxio__Student__c WHERE apxio__Email__c IN :emails];
 
+    //GET THE CLASS ID FROM THE PROVIDED STRING
     apxio__Class__c classId = [SELECT Id FROM apxio__Class__c WHERE Name = :className];
 
+    //LOOP OVER THE ENROLLMENT RECORDS TO INDSERT THE DATA
     for(integer n = 0; n < students.size(); n++) {
         apxio__Class_Enrollment__c enroll = new apxio__Class_Enrollment__c(
-        apxio__Student__c = students[n].Id,
-        apxio__Offered_Class__c = classId.Id);
+            apxio__Student__c = students[n].Id,
+            apxio__Offered_Class__c = classId.Id);
         enrollList.add(enroll);
     }
     
+    //INSERT THE LIST INTO THE DATABASE
     insert enrollList;
-*/
-
-
-    List<apxio__Student__c> students = [SELECT Id FROM apxio__Student__c WHERE apxio__Email__c IN :emails];
-
-    apxio__Class__c classId = [SELECT Id FROM apxio__Class__c WHERE Name = :className];
-
-    List<apxio__Class_Enrollment__c> enrollList = new List<apxio__Class_Enrollment__c>();
-    for(integer n=0; n<students.size(); n++) {
-        apxio__Class_Enrollment__c enroll = new apxio__Class_Enrollment__c(
-            apxio__Student__c = students[n].Id,
-            apxio__Offered_Class__c = classId.id);
-        enrollList.add(enroll);
-    }
-    insert enrollList;
-
 
 }
