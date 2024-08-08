@@ -1,13 +1,13 @@
 public void enrollStudents(List<String> emails, String className) {
     
-    apxio__Class__c classId = new apxio__Class__c{[SELECT Id FROM apxio__Class__c WHERE Name = :className]};
-
     List<apxio__Student__c> students = new List<apxio__Student__c>();
     for(integer i = 0; i<emails.size(); i++) {
         for(stud : [SELECT Id FROM apxio__Student__c WHERE apxio__Email__c = :emails[i]]) {
             students.add(stud);
         }
     }
+
+    apxio__Class__c classId = [SELECT Id FROM apxio__Class__c WHERE Name = :className];
 
     for(integer n=0; n<students.size(); n++) {
         apxio__Class_Enrollment__c enroll = new apxio__Class_Enrollment__c(
