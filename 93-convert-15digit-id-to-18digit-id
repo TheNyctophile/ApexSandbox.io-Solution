@@ -1,32 +1,35 @@
 public String convert15to18DigitId(String fifteenDigit) {
-    //Id recId = Id.ValueOf(fifteenDigit);
 
+    //CHARACTERS TO BE USED IN THE STRING
     String sLetter = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ012345';
-
     String sKey='';
 
+    //LENGTH CHECK FOR THE PROVIDED STRING
     if (fifteenDigit == null || fifteenDigit.length() != 15) return '-1';
 
-    For (Integer iChunkSplit=1; iChunkSplit<=3; iChunkSplit++){
+    //ADDING THE SUBSTRING OF 3 CHARACHTERS
+    for(Integer iChunkSplit = 1; iChunkSplit <= 3; iChunkSplit++){
 
+        //INITITAL ASCII CODE
         Integer iAsciiCode = 0;
 
-        For (Integer iCurseur = 1; iCurseur<=5; iCurseur++){
+        //    
+        for(Integer iCurseur = 1; iCurseur <= 5; iCurseur++){
 
-            Integer iPos = (iChunkSplit-1)*5 + (iCurseur-1);
+                Integer iPos = (iChunkSplit-1)*5 + (iCurseur-1);
 
-            String sChar = fifteenDigit.substring(iPos,iPos+1);
+                String sChar = fifteenDigit.substring(iPos,iPos+1);
 
-            Integer iIsCharUppercase = sChar.isAllUpperCase()?1:0;
+                Integer iIsCharUppercase = sChar.isAllUpperCase()?1:0;
 
-            iAsciiCode += iIsCharUppercase * Integer.valueOf(Math.pow(2,iCurseur-1));
+                iAsciiCode += iIsCharUppercase * Integer.valueOf(Math.pow(2,iCurseur-1));
+
+            }
+
+            sKey += sLetter.substring(iAsciiCode,iAsciiCode+1);
 
         }
 
-        sKey += sLetter.substring(iAsciiCode,iAsciiCode+1);
-
-    }
-
-    return (fifteenDigit+sKey);
+        return (fifteenDigit+sKey);
 
 }
