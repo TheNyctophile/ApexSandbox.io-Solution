@@ -1,0 +1,17 @@
+public List<Account> checkAccounts(List<Account> accounts)
+{
+    List<Account> accList = new List<Account>();
+    if(accounts.size()>0){
+        for (Account acc : accounts) {
+            if(acc.BillingCity != null) {
+                accList.add(acc);
+            }
+        }
+    }
+    else {
+        return accList;
+    }
+}
+
+//do not remove the following custom-defined exception
+public class AccountException extends Exception {}
